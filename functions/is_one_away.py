@@ -1,0 +1,16 @@
+def is_one_away(word1, word2):
+    count = 0
+    count_similar = 0
+    if (len(word1) != len(word2)):
+        return False
+    for i in range(len(word1)):
+        if (word1[i] != word2[i]):
+            count += 1
+        if (word1[i] == word2[i]):
+            count_similar += 1
+    if count > 1 or count_similar == len(word1):
+        return False
+    return True
+
+print(is_one_away(input(),input()))
+
